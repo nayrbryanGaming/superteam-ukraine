@@ -61,10 +61,10 @@ function easeOutQuart(t) {
    — Closes on anchor link click
 ============================================================ */
 (function initMobileNav() {
-  const hamburger   = document.getElementById('hamburger-btn');
-  const mobileNav   = document.getElementById('mobile-nav');
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobileNav = document.getElementById('mobile-nav');
   const mobileLinks = document.querySelectorAll('.mobile-nav__link, .mobile-nav__cta');
-  
+
   if (!hamburger || !mobileNav) return;
 
   let isOpen = false;
@@ -125,7 +125,7 @@ function easeOutQuart(t) {
 
   triggers.forEach(trigger => {
     const panelId = trigger.getAttribute('aria-controls');
-    const panel   = document.getElementById(panelId);
+    const panel = document.getElementById(panelId);
     if (!panel) return;
 
     trigger.addEventListener('click', () => {
@@ -135,7 +135,7 @@ function easeOutQuart(t) {
       triggers.forEach(otherTrigger => {
         if (otherTrigger !== trigger) {
           const otherPanelId = otherTrigger.getAttribute('aria-controls');
-          const otherPanel   = document.getElementById(otherPanelId);
+          const otherPanel = document.getElementById(otherPanelId);
           otherTrigger.setAttribute('aria-expanded', 'false');
           if (otherPanel) {
             otherPanel.setAttribute('hidden', '');
@@ -177,9 +177,9 @@ function easeOutQuart(t) {
   if (!counters.length) return;
 
   function animateCounter(el) {
-    const target   = parseInt(el.getAttribute('data-target'), 10);
-    const prefix   = el.getAttribute('data-prefix') || '';
-    const suffix   = el.getAttribute('data-suffix') || '';
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    const prefix = el.getAttribute('data-prefix') || '';
+    const suffix = el.getAttribute('data-suffix') || '';
     const duration = 900; // ms
     const startTime = performance.now();
 
@@ -189,10 +189,10 @@ function easeOutQuart(t) {
     }
 
     function update(currentTime) {
-      const elapsed  = currentTime - startTime;
+      const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      const eased    = easeOutQuart(progress);
-      const current  = Math.floor(eased * target);
+      const eased = easeOutQuart(progress);
+      const current = Math.floor(eased * target);
 
       el.textContent = prefix + current + suffix;
 
@@ -232,7 +232,7 @@ function easeOutQuart(t) {
 (function initRevealOnScroll() {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealItems = document.querySelectorAll('.reveal-item');
-  
+
   if (!revealItems.length) return;
 
   // If reduced motion — just show everything immediately
@@ -299,8 +299,8 @@ function easeOutQuart(t) {
    — Highlight nav link based on current scroll section
 ============================================================ */
 (function initActiveNavHighlight() {
-  const sections  = document.querySelectorAll('section[id]');
-  const navLinks  = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
   if (!sections.length || !navLinks.length) return;
 
   const OFFSET = 100;
@@ -338,3 +338,63 @@ function easeOutQuart(t) {
   // Initial call
   updateActiveLink();
 })();
+
+
+/* ============================================================
+   9. SKILL FILTER (Community member grid)
+   — Clicking filter buttons shows/hides member cards
+============================================================ */
+(function initSkillFilter() {
+  const filterBtns = document.querySelectorAll('.skill-filter-btn');
+  const memberCards = document.querySelectorAll('.member-card');
+  if (!filterBtns.length || !memberCards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const skill = btn.getAttribute('data-skill');
+
+      // Update active state
+      filterBtns.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+
+      // Show/hide cards
+      memberCards.forEach(card => {
+        const cardSkill = card.getAttribute('data-skill');
+        if (skill === 'all' || cardSkill === skill) {
+          card.style.display = '';
+          // Re-trigger reveal animation
+          requestAnimationFrame(() => card.classList.add('is-visible'));
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
+
+
+/* ============================================================
+   10. NEWSLETTER FORM
+   — Prevent default + show confirmation
+============================================================ */
+(function initNewsletterForm() {
+  const form = document.querySelector('.newsletter-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const input = form.querySelector('.newsletter-form__input');
+    const btn = form.querySelector('button[type="submit"]');
+    if (!input || !input.value) return;
+
+    btn.textContent = '✓ Subscribed!';
+    btn.disabled = true;
+    input.value = '';
+
+    setTimeout(() => {
+      btn.textContent = 'Subscribe';
+      btn.disabled = false;
+    }, 4000);
+  });
+})();
+

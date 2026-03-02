@@ -5,20 +5,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
-        content="Superteam Ukraine is the home of serious Solana builders — a merit-based community where contributors earn, grow, and ship real products." />
-    <meta property="og:title" content="Superteam Ukraine — Build on Solana" />
+        content="Superteam Ukraine (ex Kumeka Team) — Ukraine's leading Solana builder community. Learn, Earn, and Build on Solana with Ukraine's top Web3 contributors." />
+    <meta property="og:title" content="Superteam Ukraine | ex Kumeka Team" />
     <meta property="og:description"
-        content="Join Ukraine's leading Web3 builder community. Ship products. Earn grants. Grow your career on Solana." />
+        content="Ukraine's #1 Solana Web3 hub. Connect with founders, developers, and creators shaping the Solana ecosystem in Ukraine." />
     <meta property="og:type" content="website" />
-    <title>Superteam Ukraine — Build on Solana</title>
+    <meta name="theme-color" content="#0d0f14" />
+    <title>Superteam Ukraine | ex Kumeka Team — Build on Solana</title>
 
-    <!-- Preconnect for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet" />
-
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -29,42 +28,50 @@
   ============================================================ -->
     <header class="navbar" id="navbar" role="banner">
         <div class="container navbar__inner">
+
             <a href="/" class="navbar__logo" aria-label="Superteam Ukraine Home">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                    <rect width="32" height="32" rx="8" fill="var(--accent-primary)" />
-                    <path d="M8 22 L16 8 L24 22" stroke="var(--bg-base)" stroke-width="2.5" stroke-linecap="round"
-                        stroke-linejoin="round" fill="none" />
-                    <path d="M10.5 18 L21.5 18" stroke="var(--bg-base)" stroke-width="2.5" stroke-linecap="round" />
+                <!-- Logo: wheat stalk + ST lettermark -->
+                <svg class="navbar__logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none"
+                    aria-hidden="true">
+                    <rect width="36" height="36" rx="9" fill="#E8C547" />
+                    <!-- S letterform -->
+                    <text x="6" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="20" font-weight="800"
+                        fill="#0d0f14">ST</text>
+                    <!-- Wheat grain top right -->
+                    <ellipse cx="29" cy="8" rx="3" ry="5" transform="rotate(15 29 8)" fill="#0d0f14" opacity="0.5" />
+                    <line x1="29" y1="13" x2="29" y2="20" stroke="#0d0f14" stroke-width="1.2" opacity="0.5" />
                 </svg>
-                <span class="navbar__wordmark">Superteam <em>Ukraine</em></span>
+                <div class="navbar__wordmark">
+                    <span class="navbar__wordmark-main">Superteam <em>Ukraine</em></span>
+                    <span class="navbar__wordmark-sub">ex Kumeka Team</span>
+                </div>
             </a>
 
             <nav class="navbar__nav" id="main-nav" role="navigation" aria-label="Primary navigation">
                 <a href="#about" class="nav-link">About</a>
-                <a href="#ecosystem" class="nav-link">Ecosystem</a>
-                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#pillars" class="nav-link">What We Do</a>
+                <a href="#community" class="nav-link">Community</a>
                 <a href="#events" class="nav-link">Events</a>
                 <a href="#faq" class="nav-link">FAQ</a>
             </nav>
 
             <div class="navbar__actions">
-                <a href="#join" class="btn btn--primary btn--sm" id="navbar-cta">Join Community</a>
-                <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open navigation menu"
-                    aria-expanded="false" aria-controls="main-nav">
+                <a href="#join" class="btn btn--primary btn--sm" id="navbar-cta">Join Now</a>
+                <button class="navbar__hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="mobile-nav">
                     <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile overlay nav -->
         <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
-            <nav class="mobile-nav__links" role="navigation" aria-label="Mobile navigation">
+            <nav class="mobile-nav__links">
                 <a href="#about" class="mobile-nav__link">About</a>
-                <a href="#ecosystem" class="mobile-nav__link">Ecosystem</a>
-                <a href="#projects" class="mobile-nav__link">Projects</a>
+                <a href="#pillars" class="mobile-nav__link">What We Do</a>
+                <a href="#community" class="mobile-nav__link">Community</a>
                 <a href="#events" class="mobile-nav__link">Events</a>
                 <a href="#faq" class="mobile-nav__link">FAQ</a>
-                <a href="#join" class="btn btn--primary mobile-nav__cta">Join Community</a>
+                <a href="#join" class="btn btn--primary mobile-nav__cta">Join Now</a>
             </nav>
         </div>
     </header>
@@ -75,191 +82,250 @@
          HERO
     ============================================================ -->
         <section class="section section--hero" id="hero" aria-labelledby="hero-heading">
-            <!-- Wheat motif SVG watermark -->
+
+            <!-- Wheat watermark SVG -->
             <div class="wheat-motif wheat-motif--hero" aria-hidden="true" style="display:none">
-                <svg viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Wheat stalk -->
-                    <line x1="100" y1="380" x2="100" y2="40" stroke="currentColor" stroke-width="1.5" />
-                    <!-- Grains left side -->
-                    <ellipse cx="100" cy="340" rx="14" ry="22" transform="rotate(-30 100 340)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="295" rx="13" ry="21" transform="rotate(-28 100 295)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="252" rx="12" ry="20" transform="rotate(-25 100 252)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="212" rx="11" ry="18" transform="rotate(-22 100 212)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="175" rx="10" ry="16" transform="rotate(-20 100 175)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <!-- Grains right side -->
-                    <ellipse cx="100" cy="320" rx="14" ry="22" transform="rotate(30 100 320)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="277" rx="13" ry="21" transform="rotate(28 100 277)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="235" rx="12" ry="20" transform="rotate(25 100 235)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="196" rx="11" ry="18" transform="rotate(22 100 196)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <!-- Tip -->
-                    <ellipse cx="100" cy="80" rx="7" ry="24" stroke="currentColor" stroke-width="1.2" fill="none" />
-                    <!-- Awns -->
-                    <line x1="100" y1="56" x2="88" y2="30" stroke="currentColor" stroke-width="1" />
-                    <line x1="100" y1="56" x2="112" y2="30" stroke="currentColor" stroke-width="1" />
-                    <line x1="100" y1="64" x2="80" y2="38" stroke="currentColor" stroke-width="1" />
-                    <line x1="100" y1="64" x2="120" y2="38" stroke="currentColor" stroke-width="1" />
+                <svg viewBox="0 0 160 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="80" y1="370" x2="80" y2="30" stroke="currentColor" stroke-width="1.5" />
+                    <!-- Left grains -->
+                    <ellipse cx="80" cy="330" rx="13" ry="21" transform="rotate(-28 80 330)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <ellipse cx="80" cy="290" rx="12" ry="19" transform="rotate(-26 80 290)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <ellipse cx="80" cy="252" rx="11" ry="18" transform="rotate(-24 80 252)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <ellipse cx="80" cy="216" rx="10" ry="16" transform="rotate(-22 80 216)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <ellipse cx="80" cy="183" rx="9" ry="14" transform="rotate(-20 80 183)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <!-- Right grains -->
+                    <ellipse cx="80" cy="310" rx="13" ry="21" transform="rotate(28 80 310)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <ellipse cx="80" cy="271" rx="12" ry="19" transform="rotate(26 80 271)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <ellipse cx="80" cy="234" rx="11" ry="18" transform="rotate(24 80 234)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <ellipse cx="80" cy="199" rx="10" ry="16" transform="rotate(22 80 199)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <!-- Tip + awns -->
+                    <ellipse cx="80" cy="72" rx="6" ry="22" stroke="currentColor" stroke-width="1.1" fill="none" />
+                    <line x1="80" y1="50" x2="68" y2="24" stroke="currentColor" stroke-width="0.9" />
+                    <line x1="80" y1="50" x2="92" y2="24" stroke="currentColor" stroke-width="0.9" />
+                    <line x1="80" y1="58" x2="64" y2="32" stroke="currentColor" stroke-width="0.9" />
+                    <line x1="80" y1="58" x2="96" y2="32" stroke="currentColor" stroke-width="0.9" />
                 </svg>
             </div>
 
             <div class="container hero__inner">
                 <div class="hero__content">
-                    <div class="hero__badge">
-                        <span class="badge badge--accent">🇺🇦 Solana Ecosystem</span>
+
+                    <div class="hero__eyebrow">
+                        <span class="badge badge--accent">🌾 Solana · Ukraine</span>
+                        <span class="rebrand-pill">Rebranding from Kumeka Team</span>
                     </div>
 
                     <h1 class="hero__headline" id="hero-heading">
-                        Where Ukrainian builders<br />
-                        <span class="text-accent">ship what matters.</span>
+                        Ukraine's home<br />
+                        for <span class="text-accent">Solana builders.</span>
                     </h1>
 
                     <p class="hero__subtext">
-                        Superteam Ukraine connects serious Solana contributors with real grants, meaningful projects,
-                        and a community that raises the bar. Merit earns access. Output earns reputation.
+                        Connect, collaborate, and grow with a community of founders, developers, and creators shaping
+                        the Solana ecosystem in Ukraine. Support in launching a Web3 startup, developing your career,
+                        and learning.
                     </p>
 
                     <div class="hero__actions">
-                        <a href="#join" class="btn btn--primary btn--lg" id="hero-cta-primary">Apply to Join</a>
-                        <a href="#about" class="btn btn--ghost btn--lg">Explore the ecosystem</a>
+                        <a href="#join" class="btn btn--primary btn--lg">Join the Community</a>
+                        <a href="#pillars" class="btn btn--secondary btn--lg">Explore What We Do</a>
                     </div>
 
                     <div class="hero__stats">
                         <div class="hero__stat">
-                            <span class="hero__stat-number" data-target="340">0</span>
-                            <span class="hero__stat-label">Active Members</span>
+                            <span class="hero__stat-number mono" data-target="340">0</span>
+                            <span class="hero__stat-label">Members</span>
                         </div>
                         <div class="hero__stat-divider" aria-hidden="true"></div>
                         <div class="hero__stat">
-                            <span class="hero__stat-number" data-target="120">0</span>
+                            <span class="hero__stat-number mono" data-target="120">0</span>
                             <span class="hero__stat-label">Projects Shipped</span>
                         </div>
                         <div class="hero__stat-divider" aria-hidden="true"></div>
                         <div class="hero__stat">
-                            <span class="hero__stat-number" data-prefix="$" data-suffix="K" data-target="850">0</span>
+                            <span class="hero__stat-number mono" data-prefix="$" data-suffix="K"
+                                data-target="850">0</span>
                             <span class="hero__stat-label">Grants Distributed</span>
                         </div>
+                        <div class="hero__stat-divider" aria-hidden="true"></div>
+                        <div class="hero__stat">
+                            <span class="hero__stat-number mono" data-target="4">0</span>
+                            <span class="hero__stat-label">Years Active</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero photo area — real-life photo placeholder -->
+                <div class="hero__photo-area" aria-label="Community event photo">
+                    <div class="photo-placeholder photo-placeholder--hero">
+                        <div class="photo-placeholder__inner">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                                <rect x="4" y="8" width="32" height="24" rx="3" stroke="currentColor"
+                                    stroke-width="1.5" />
+                                <circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1.5" />
+                                <circle cx="20" cy="20" r="2.5" fill="currentColor" />
+                                <path d="M14 8V6M26 8V6" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <p class="photo-placeholder__label">Community Photo<br /><span>Real photos from our events
+                                    will be placed here</span></p>
+                        </div>
+                        <!-- Photo caption overlay -->
+                        <div class="photo-placeholder__caption">
+                            <span>Superteam Ukraine Kyiv Meetup, 2025</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ============================================================
-         TRUST BAR
+         TRUST BAR — Backed by / Part of
     ============================================================ -->
-        <section class="section section--trust" aria-label="Partners and ecosystem">
+        <section class="section section--trust" aria-label="Ecosystem partners">
             <div class="container">
-                <p class="trust-bar__label">Supported by &amp; building within</p>
+                <p class="trust-bar__label">Part of the global Solana ecosystem</p>
                 <div class="trust-bar__logos" role="list">
-                    <div class="trust-bar__logo" role="listitem" aria-label="Solana Foundation">
-                        <svg viewBox="0 0 120 28" fill="none" aria-hidden="true" height="20">
-                            <circle cx="14" cy="14" r="13" stroke="currentColor" stroke-width="1.5" />
-                            <path d="M8 14h12M14 8l6 6-6 6" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <text x="32" y="19" font-family="Plus Jakarta Sans, sans-serif" font-size="13"
-                                font-weight="600" fill="currentColor">Solana Foundation</text>
-                        </svg>
+                    <div class="trust-bar__logo" role="listitem">
+                        <span class="trust-bar__logo-text">Solana Foundation</span>
                     </div>
-                    <div class="trust-bar__logo" role="listitem" aria-label="Superteam Global">
-                        <svg viewBox="0 0 120 28" fill="none" aria-hidden="true" height="20">
-                            <rect x="1" y="1" width="26" height="26" rx="6" stroke="currentColor" stroke-width="1.5" />
-                            <path d="M7 14l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <text x="32" y="19" font-family="Plus Jakarta Sans, sans-serif" font-size="13"
-                                font-weight="600" fill="currentColor">Superteam Global</text>
-                        </svg>
+                    <div class="trust-bar__divider" aria-hidden="true"></div>
+                    <div class="trust-bar__logo" role="listitem">
+                        <span class="trust-bar__logo-text">Superteam Global</span>
                     </div>
-                    <div class="trust-bar__logo" role="listitem" aria-label="Phantom">
-                        <svg viewBox="0 0 90 28" fill="none" aria-hidden="true" height="20">
-                            <rect x="1" y="5" width="18" height="18" rx="9" stroke="currentColor" stroke-width="1.5" />
-                            <circle cx="10" cy="14" r="4" fill="currentColor" />
-                            <text x="26" y="19" font-family="Plus Jakarta Sans, sans-serif" font-size="13"
-                                font-weight="600" fill="currentColor">Phantom</text>
-                        </svg>
+                    <div class="trust-bar__divider" aria-hidden="true"></div>
+                    <div class="trust-bar__logo" role="listitem">
+                        <span class="trust-bar__logo-text">Colosseum</span>
                     </div>
-                    <div class="trust-bar__logo" role="listitem" aria-label="Jupiter">
-                        <svg viewBox="0 0 80 28" fill="none" aria-hidden="true" height="20">
-                            <path d="M4 22 L14 6 L24 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <text x="30" y="19" font-family="Plus Jakarta Sans, sans-serif" font-size="13"
-                                font-weight="600" fill="currentColor">Jupiter</text>
-                        </svg>
+                    <div class="trust-bar__divider" aria-hidden="true"></div>
+                    <div class="trust-bar__logo" role="listitem">
+                        <span class="trust-bar__logo-text">Phantom</span>
                     </div>
-                    <div class="trust-bar__logo" role="listitem" aria-label="Dialect">
-                        <svg viewBox="0 0 80 28" fill="none" aria-hidden="true" height="20">
-                            <path d="M4 8 h20 a4 4 0 0 1 0 12 H10 l-6 6 V12 a4 4 0 0 1 0-4Z" stroke="currentColor"
-                                stroke-width="1.5" fill="none" />
-                            <text x="30" y="19" font-family="Plus Jakarta Sans, sans-serif" font-size="13"
-                                font-weight="600" fill="currentColor">Dialect</text>
-                        </svg>
+                    <div class="trust-bar__divider" aria-hidden="true"></div>
+                    <div class="trust-bar__logo" role="listitem">
+                        <span class="trust-bar__logo-text">Jupiter</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ============================================================
-         WHAT WE DO
+         ABOUT / REBRAND STORY
     ============================================================ -->
         <section class="section section--about" id="about" aria-labelledby="about-heading">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-heading" id="about-heading">What Superteam Ukraine does</h2>
-                    <p class="section-subtext">We don't just talk about Web3. We fund it, build it, and ship it — with a
-                        community of contributors who hold each other to a high standard.</p>
+            <div class="container about__inner">
+                <div class="about__text">
+                    <span class="section-eyebrow">Our Story</span>
+                    <h2 class="section-heading" id="about-heading">From Kumeka Team<br />to Superteam Ukraine</h2>
+                    <p class="section-subtext">
+                        We are rebranding from Kumeka Team to Superteam Ukraine — the #1 Solana Web3 hub in Ukraine.
+                        Since our founding, we have supported founders, developers, and creators building on Solana.
+                    </p>
+                    <p class="section-subtext" style="margin-top:1rem;">
+                        Now, as Superteam Ukraine, we connect the best Ukrainian builders with the global Superteam
+                        network — opening doors to international grants, bounties, and collaboration.
+                    </p>
+                    <a href="#join" class="btn btn--primary" style="margin-top:2rem;">Be Part of the Rebrand →</a>
                 </div>
 
-                <div class="grid grid--3">
-                    <div class="card card--feature reveal-item">
-                        <div class="card__icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 2L2 7l10 5 10-5-10-5Z" stroke="currentColor" stroke-width="1.8"
+                <!-- About photo placeholder -->
+                <div class="about__photo">
+                    <div class="photo-placeholder photo-placeholder--about">
+                        <div class="photo-placeholder__inner">
+                            <svg width="36" height="36" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                                <rect x="4" y="8" width="32" height="24" rx="3" stroke="currentColor"
+                                    stroke-width="1.5" />
+                                <circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                            <p class="photo-placeholder__label">Team Photo<br /><span>Kumeka Team → Superteam
+                                    Ukraine</span></p>
+                        </div>
+                    </div>
+                    <!-- Accent stat card overlapping photo -->
+                    <div class="about__stat-overlay">
+                        <span class="about__stat-number mono">2021</span>
+                        <span class="about__stat-label">Founded as Kumeka</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+         THREE PILLARS: LEARN / EARN / BUILD
+    ============================================================ -->
+        <section class="section section--pillars section--alternate" id="pillars" aria-labelledby="pillars-heading">
+            <div class="container">
+                <div class="section-header section-header--center">
+                    <span class="section-eyebrow">What We Do</span>
+                    <h2 class="section-heading" id="pillars-heading">Everything you need to succeed on Solana</h2>
+                    <p class="section-subtext">Three pathways. One community. Built for Ukrainian builders.</p>
+                </div>
+
+                <div class="pillars-grid">
+
+                    <div class="pillar-card reveal-item">
+                        <div class="pillar-card__number mono" aria-hidden="true">01</div>
+                        <div class="pillar-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <path d="M4 20L14 6L24 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
-                                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M7 16h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                             </svg>
                         </div>
-                        <h3 class="card__title">Build</h3>
-                        <p class="card__body">Access a network of technical co-founders, auditors, and product partners.
-                            Ship on Solana with infrastructure support from day one.</p>
-                        <span class="badge badge--neutral">For Developers</span>
+                        <h3 class="pillar-card__title">Learn</h3>
+                        <p class="pillar-card__body">Access quality resources to enhance your skills in the Solana
+                            ecosystem and Web3. Solana programming training, workshops for startup founders, support
+                            from top Solana ecosystem experts.</p>
+                        <a href="https://solana.com/developers" class="pillar-card__link" target="_blank"
+                            rel="noopener noreferrer">Start Learning →</a>
                     </div>
 
-                    <div class="card card--feature reveal-item">
-                        <div class="card__icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8"
-                                    stroke-linecap="round" />
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8" />
+                    <div class="pillar-card pillar-card--featured reveal-item">
+                        <div class="pillar-card__number mono" aria-hidden="true">02</div>
+                        <div class="pillar-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="2" />
+                                <path d="M14 8v6l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
                             </svg>
                         </div>
-                        <h3 class="card__title">Earn</h3>
-                        <p class="card__body">Compete in bounties, win grants, and get matched to paid contributor roles
-                            inside the Solana ecosystem and beyond. Merit earns access.</p>
-                        <span class="badge badge--neutral">For Contributors</span>
+                        <h3 class="pillar-card__title">Earn</h3>
+                        <p class="pillar-card__body">Enjoy exclusive opportunities: grants for startup development and
+                            seed funding, cash bounties, employment in hub projects, and cash bonuses for students.</p>
+                        <a href="https://earn.superteam.fun/" class="pillar-card__link" target="_blank"
+                            rel="noopener noreferrer">Browse Opportunities →</a>
                     </div>
 
-                    <div class="card card--feature reveal-item">
-                        <div class="card__icon" aria-hidden="true">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor"
-                                    stroke-width="1.8" stroke-linecap="round" />
-                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.8" />
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor"
-                                    stroke-width="1.8" stroke-linecap="round" />
+                    <div class="pillar-card reveal-item">
+                        <div class="pillar-card__number mono" aria-hidden="true">03</div>
+                        <div class="pillar-card__icon" aria-hidden="true">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                                <rect x="3" y="3" width="10" height="10" rx="2" stroke="currentColor"
+                                    stroke-width="2" />
+                                <rect x="15" y="3" width="10" height="10" rx="2" stroke="currentColor"
+                                    stroke-width="2" />
+                                <rect x="3" y="15" width="10" height="10" rx="2" stroke="currentColor"
+                                    stroke-width="2" />
+                                <rect x="15" y="15" width="10" height="10" rx="2" stroke="currentColor"
+                                    stroke-width="2" />
                             </svg>
                         </div>
-                        <h3 class="card__title">Grow</h3>
-                        <p class="card__body">Learn from senior builders, attend IRL events across Ukraine, and build
-                            your on-chain reputation inside one of Solana's most active regional chapters.</p>
-                        <span class="badge badge--neutral">For Everyone</span>
+                        <h3 class="pillar-card__title">Build</h3>
+                        <p class="pillar-card__body">Bring your projects to life. Builder community on Solana, Solana
+                            hackathons and KUMEKATHON, acceleration program for top projects, and support from local and
+                            international experts.</p>
+                        <a href="https://build.superteam.fun/" class="pillar-card__link" target="_blank"
+                            rel="noopener noreferrer">Start Building →</a>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -267,134 +333,149 @@
         <!-- ============================================================
          ECOSYSTEM STATS
     ============================================================ -->
-        <section class="section section--stats section--alternate" id="ecosystem" aria-labelledby="stats-heading">
+        <section class="section section--stats" id="ecosystem" aria-labelledby="stats-heading">
             <div class="container">
                 <div class="section-header section-header--center">
+                    <span class="section-eyebrow">By The Numbers</span>
                     <h2 class="section-heading" id="stats-heading">Active. Verified. Growing.</h2>
-                    <p class="section-subtext">These are real numbers from the Superteam Ukraine chapter — updated
-                        quarterly.</p>
                 </div>
 
                 <div class="stats-grid">
                     <div class="stat-card reveal-item">
-                        <span class="stat-card__number" data-target="340">0</span>
-                        <span class="stat-card__label">Active members</span>
+                        <span class="stat-card__number mono" data-target="340">0</span>
+                        <span class="stat-card__label">Community Members</span>
                     </div>
                     <div class="stat-card reveal-item">
-                        <span class="stat-card__number" data-target="120">0</span>
-                        <span class="stat-card__label">Projects shipped</span>
+                        <span class="stat-card__number mono" data-target="120">0</span>
+                        <span class="stat-card__label">Projects Shipped</span>
                     </div>
                     <div class="stat-card reveal-item">
-                        <span class="stat-card__number" data-prefix="$" data-suffix="K" data-target="850">0</span>
-                        <span class="stat-card__label">Grants distributed</span>
+                        <span class="stat-card__number mono" data-prefix="$" data-suffix="K" data-target="850">0</span>
+                        <span class="stat-card__label">Grants Distributed</span>
                     </div>
                     <div class="stat-card reveal-item">
-                        <span class="stat-card__number" data-target="48">0</span>
-                        <span class="stat-card__label">Events hosted</span>
+                        <span class="stat-card__number mono" data-target="48">0</span>
+                        <span class="stat-card__label">Events Hosted</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ============================================================
-         HOW IT WORKS
+         COMMUNITY — Photo gallery + member spotlight
     ============================================================ -->
-        <section class="section section--how" id="how" aria-labelledby="how-heading">
+        <section class="section section--community section--alternate" id="community"
+            aria-labelledby="community-heading">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-heading" id="how-heading">How to get involved</h2>
-                    <p class="section-subtext">Three steps. No gatekeeping. Just shipping.</p>
+                    <span class="section-eyebrow">Our People</span>
+                    <h2 class="section-heading" id="community-heading">Builders behind the ecosystem</h2>
+                    <p class="section-subtext">Founders, developers, designers, and researchers — the Ukrainian talent
+                        reshaping Solana.</p>
                 </div>
 
-                <ol class="how-steps">
-                    <li class="how-step reveal-item">
-                        <div class="how-step__number" aria-hidden="true">01</div>
-                        <div class="how-step__content">
-                            <h3 class="how-step__title">Apply to the community</h3>
-                            <p class="how-step__body">Fill out a brief application. Tell us what you build, what you've
-                                shipped, and what you're looking for. We review weekly.</p>
-                        </div>
-                    </li>
-                    <li class="how-step reveal-item">
-                        <div class="how-step__number" aria-hidden="true">02</div>
-                        <div class="how-step__content">
-                            <h3 class="how-step__title">Pick up your first bounty</h3>
-                            <p class="how-step__body">Browse open tasks — design, development, research, writing.
-                                Complete one and earn your first on-chain credential. Contribution history is public.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="how-step reveal-item">
-                        <div class="how-step__number" aria-hidden="true">03</div>
-                        <div class="how-step__content">
-                            <h3 class="how-step__title">Build your on-chain reputation</h3>
-                            <p class="how-step__body">Over time, your completed work, earnings, and peer verifications
-                                accumulate into a verifiable profile — the currency of the Superteam ecosystem.</p>
-                        </div>
-                    </li>
-                </ol>
-
-                <div class="section-cta">
-                    <a href="#join" class="btn btn--primary btn--lg">Start with an application</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================================
-         FEATURED PROJECTS
-    ============================================================ -->
-        <section class="section section--projects section--alternate" id="projects" aria-labelledby="projects-heading">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-heading" id="projects-heading">Built by our community</h2>
-                    <p class="section-subtext">A selection of products, protocols, and tools that started inside
-                        Superteam Ukraine.</p>
-                </div>
-
-                <div class="grid grid--3">
-                    <article class="card card--project reveal-item">
-                        <div class="card__image-placeholder" aria-label="Project screenshot placeholder"></div>
-                        <div class="card__content">
-                            <div class="card__tags">
-                                <span class="badge badge--accent">Hackathon Winner</span>
+                <!-- Photo grid — real-life photo placeholders -->
+                <div class="photo-grid">
+                    <div class="photo-grid__item photo-grid__item--large">
+                        <div class="photo-placeholder photo-placeholder--grid">
+                            <div class="photo-placeholder__inner">
+                                <p class="photo-placeholder__label">Hackathon Photo<br /><span>Kyiv, 2024</span></p>
                             </div>
-                            <h3 class="card__title">SolShift Protocol</h3>
-                            <p class="card__body">Cross-chain liquidity bridge built on Solana with zero-MEV
-                                architecture. Won 1st place at Breakpoint Hackathon 2024.</p>
-                            <a href="#" class="card__link" aria-label="View SolShift Protocol project">View project
-                                →</a>
                         </div>
-                    </article>
-
-                    <article class="card card--project reveal-item">
-                        <div class="card__image-placeholder" aria-label="Project screenshot placeholder"></div>
-                        <div class="card__content">
-                            <div class="card__tags">
-                                <span class="badge badge--success">Grant Recipient</span>
+                    </div>
+                    <div class="photo-grid__item">
+                        <div class="photo-placeholder photo-placeholder--grid">
+                            <div class="photo-placeholder__inner">
+                                <p class="photo-placeholder__label">Workshop<br /><span>Lviv, 2024</span></p>
                             </div>
-                            <h3 class="card__title">Vault.ua</h3>
-                            <p class="card__body">Non-custodial savings protocol for Ukrainian users, enabling
-                                yield-bearing SOL positions with hryvnia on/off ramps.</p>
-                            <a href="#" class="card__link" aria-label="View Vault.ua project">View project →</a>
                         </div>
-                    </article>
-
-                    <article class="card card--project reveal-item">
-                        <div class="card__image-placeholder" aria-label="Project screenshot placeholder"></div>
-                        <div class="card__content">
-                            <div class="card__tags">
-                                <span class="badge badge--neutral">Open Source</span>
+                    </div>
+                    <div class="photo-grid__item">
+                        <div class="photo-placeholder photo-placeholder--grid">
+                            <div class="photo-placeholder__inner">
+                                <p class="photo-placeholder__label">Demo Day<br /><span>Kharkiv, 2025</span></p>
                             </div>
-                            <h3 class="card__title">DevKit UA</h3>
-                            <p class="card__body">Open-source Solana development toolkit with Ukrainian-language
-                                documentation. 1,200+ GitHub stars, used by 80+ devs.</p>
-                            <a href="#" class="card__link" aria-label="View DevKit UA project">View project →</a>
                         </div>
-                    </article>
+                    </div>
+                    <div class="photo-grid__item">
+                        <div class="photo-placeholder photo-placeholder--grid">
+                            <div class="photo-placeholder__inner">
+                                <p class="photo-placeholder__label">Kumekathon<br /><span>Online, 2025</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-grid__item">
+                        <div class="photo-placeholder photo-placeholder--grid">
+                            <div class="photo-placeholder__inner">
+                                <p class="photo-placeholder__label">Breakpoint<br /><span>Singapore, 2024</span></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="section-cta">
-                    <a href="#" class="btn btn--secondary">See all projects</a>
+                <!-- Member skill filter — functional on scroll -->
+                <div class="member-section">
+                    <div class="member-section__header">
+                        <h3 class="member-section__title">Discover the talents shaping our ecosystem</h3>
+                        <div class="skill-filters" role="group" aria-label="Filter members by skill">
+                            <button class="skill-filter-btn is-active" data-skill="all">All</button>
+                            <button class="skill-filter-btn" data-skill="dev">Development</button>
+                            <button class="skill-filter-btn" data-skill="design">Design</button>
+                            <button class="skill-filter-btn" data-skill="research">Research</button>
+                            <button class="skill-filter-btn" data-skill="marketing">Marketing</button>
+                        </div>
+                    </div>
+
+                    <div class="member-grid">
+                        <div class="member-card reveal-item" data-skill="dev">
+                            <div class="member-card__avatar" aria-hidden="true"><span>AK</span></div>
+                            <div class="member-card__info">
+                                <span class="member-card__name">Andriy K.</span>
+                                <span class="member-card__role">Solana Engineer</span>
+                            </div>
+                            <span class="badge badge--neutral">Dev</span>
+                        </div>
+                        <div class="member-card reveal-item" data-skill="design">
+                            <div class="member-card__avatar" aria-hidden="true"><span>OV</span></div>
+                            <div class="member-card__info">
+                                <span class="member-card__name">Olena V.</span>
+                                <span class="member-card__role">Product Designer</span>
+                            </div>
+                            <span class="badge badge--neutral">Design</span>
+                        </div>
+                        <div class="member-card reveal-item" data-skill="dev">
+                            <div class="member-card__avatar" aria-hidden="true"><span>DM</span></div>
+                            <div class="member-card__info">
+                                <span class="member-card__name">Dmytro M.</span>
+                                <span class="member-card__role">Rust Developer</span>
+                            </div>
+                            <span class="badge badge--neutral">Dev</span>
+                        </div>
+                        <div class="member-card reveal-item" data-skill="research">
+                            <div class="member-card__avatar" aria-hidden="true"><span>NB</span></div>
+                            <div class="member-card__info">
+                                <span class="member-card__name">Natalia B.</span>
+                                <span class="member-card__role">DeFi Researcher</span>
+                            </div>
+                            <span class="badge badge--neutral">Research</span>
+                        </div>
+                        <div class="member-card reveal-item" data-skill="marketing">
+                            <div class="member-card__avatar" aria-hidden="true"><span>IP</span></div>
+                            <div class="member-card__info">
+                                <span class="member-card__name">Ivan P.</span>
+                                <span class="member-card__role">Growth Lead</span>
+                            </div>
+                            <span class="badge badge--neutral">Marketing</span>
+                        </div>
+                        <div class="member-card reveal-item" data-skill="dev">
+                            <div class="member-card__avatar" aria-hidden="true"><span>SK</span></div>
+                            <div class="member-card__info">
+                                <span class="member-card__name">Svitlana K.</span>
+                                <span class="member-card__role">Smart Contract Auditor</span>
+                            </div>
+                            <span class="badge badge--neutral">Dev</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -405,168 +486,130 @@
         <section class="section section--events" id="events" aria-labelledby="events-heading">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-heading" id="events-heading">Community events</h2>
-                    <p class="section-subtext">In-person and online gatherings across Ukraine and the global Solana
-                        ecosystem.</p>
+                    <span class="section-eyebrow">Upcoming Events</span>
+                    <h2 class="section-heading" id="events-heading">There is a lot happening</h2>
+                    <p class="section-subtext">In-person meetups, hackathons, and workshops across Ukraine and the
+                        global Solana ecosystem.</p>
                 </div>
 
                 <div class="events-list">
                     <article class="event-item reveal-item">
-                        <div class="event-item__date" aria-label="March 15, 2026">
+                        <div class="event-item__date">
                             <span class="event-item__month">Mar</span>
-                            <span class="event-item__day">15</span>
+                            <span class="event-item__day mono">15</span>
+                        </div>
+                        <div class="event-item__img">
+                            <div class="photo-placeholder photo-placeholder--event">
+                                <div class="photo-placeholder__inner">
+                                    <p class="photo-placeholder__label">Event</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="event-item__content">
                             <div class="event-item__meta">
                                 <span class="badge badge--neutral">Workshop</span>
-                                <span class="badge badge--neutral">Kyiv</span>
+                                <span class="badge badge--neutral">Kyiv · IRL</span>
                             </div>
                             <h3 class="event-item__title">Solana Program Architecture Deep Dive</h3>
                             <p class="event-item__body">Advanced workshop covering account models, CPI patterns, and
                                 PDAs. For intermediate to senior Solana devs.</p>
                         </div>
-                        <a href="#" class="btn btn--secondary btn--sm event-item__cta"
-                            aria-label="Register for Solana Program Architecture Deep Dive">Register</a>
+                        <a href="#" class="btn btn--secondary btn--sm">Register</a>
                     </article>
 
                     <article class="event-item reveal-item">
-                        <div class="event-item__date" aria-label="March 28, 2026">
+                        <div class="event-item__date">
                             <span class="event-item__month">Mar</span>
-                            <span class="event-item__day">28</span>
+                            <span class="event-item__day mono">28</span>
+                        </div>
+                        <div class="event-item__img">
+                            <div class="photo-placeholder photo-placeholder--event">
+                                <div class="photo-placeholder__inner">
+                                    <p class="photo-placeholder__label">Event</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="event-item__content">
                             <div class="event-item__meta">
-                                <span class="badge badge--neutral">Hackathon</span>
+                                <span class="badge badge--accent">Hackathon</span>
                                 <span class="badge badge--neutral">Online</span>
                             </div>
-                            <h3 class="event-item__title">UA Builders Sprint — Q1 2026</h3>
-                            <p class="event-item__body">48-hour hackathon open to all Superteam Ukraine members. $20,000
-                                in prizes across 4 tracks.</p>
+                            <h3 class="event-item__title">KUMEKATHON — Q1 2026</h3>
+                            <p class="event-item__body">48-hour hackathon. $20,000 in prizes across 4 tracks. Open to
+                                all Superteam Ukraine members.</p>
                         </div>
-                        <a href="#" class="btn btn--secondary btn--sm event-item__cta"
-                            aria-label="Register for UA Builders Sprint">Register</a>
+                        <a href="#" class="btn btn--secondary btn--sm">Register</a>
                     </article>
 
                     <article class="event-item reveal-item">
-                        <div class="event-item__date" aria-label="April 10, 2026">
+                        <div class="event-item__date">
                             <span class="event-item__month">Apr</span>
-                            <span class="event-item__day">10</span>
+                            <span class="event-item__day mono">10</span>
+                        </div>
+                        <div class="event-item__img">
+                            <div class="photo-placeholder photo-placeholder--event">
+                                <div class="photo-placeholder__inner">
+                                    <p class="photo-placeholder__label">Event</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="event-item__content">
                             <div class="event-item__meta">
                                 <span class="badge badge--neutral">Meetup</span>
-                                <span class="badge badge--neutral">Lviv</span>
+                                <span class="badge badge--neutral">Lviv · IRL</span>
                             </div>
                             <h3 class="event-item__title">Superteam Ukraine Lviv Chapter Launch</h3>
-                            <p class="event-item__body">Inaugural meetup for the Lviv sub-community. Networking, project
-                                demos, and open Q&A with founding members.</p>
+                            <p class="event-item__body">Inaugural meetup for the Lviv sub-community. Networking, demos,
+                                and open Q&A with founding members.</p>
                         </div>
-                        <a href="#" class="btn btn--secondary btn--sm event-item__cta"
-                            aria-label="Register for Lviv Chapter Launch">Register</a>
+                        <a href="#" class="btn btn--secondary btn--sm">Register</a>
                     </article>
                 </div>
 
                 <div class="section-cta">
-                    <a href="#" class="btn btn--ghost">View all events</a>
+                    <a href="https://lu.ma/SuperteamUkraine" class="btn btn--ghost" target="_blank"
+                        rel="noopener noreferrer">View all events on Luma →</a>
                 </div>
             </div>
         </section>
 
         <!-- ============================================================
-         TESTIMONIALS
+         REGISTER YOUR PROJECT
     ============================================================ -->
-        <section class="section section--testimonials section--alternate" aria-labelledby="testimonials-heading">
-            <div class="container">
-                <div class="section-header section-header--center">
-                    <h2 class="section-heading" id="testimonials-heading">From the builders</h2>
+        <section class="section section--register section--alternate" aria-labelledby="register-heading">
+            <div class="container register__inner">
+                <div class="register__text">
+                    <span class="section-eyebrow">For Founders</span>
+                    <h2 class="section-heading" id="register-heading">Register your project with Superteam Ukraine</h2>
+                    <p class="section-subtext">Complete this form to be eligible for future Superteam Ukraine project
+                        selection, grants, and stay updated with the latest opportunities in the Solana ecosystem in
+                        Ukraine.</p>
+                    <a href="#" class="btn btn--primary btn--lg" style="margin-top:2rem;">Register Your Project</a>
                 </div>
-
-                <div class="grid grid--3">
-                    <blockquote class="testimonial-card reveal-item">
-                        <div class="testimonial-card__avatar" aria-hidden="true">
-                            <span>AK</span>
-                        </div>
-                        <p class="testimonial-card__quote">"Superteam Ukraine is the only community where I've seen
-                            six-figure grants go to builders who actually ship — not to those who pitch the best decks."
-                        </p>
-                        <footer class="testimonial-card__author">
-                            <span class="testimonial-card__name">Andriy K.</span>
-                            <span class="testimonial-card__role">Solana Program Engineer, Kyiv</span>
-                        </footer>
-                    </blockquote>
-
-                    <blockquote class="testimonial-card reveal-item">
-                        <div class="testimonial-card__avatar" aria-hidden="true">
-                            <span>OV</span>
-                        </div>
-                        <p class="testimonial-card__quote">"I joined as a designer with zero Web3 experience. Within 4
-                            months I had two completed bounties, a grant, and a full-time role inside a Solana
-                            protocol."</p>
-                        <footer class="testimonial-card__author">
-                            <span class="testimonial-card__name">Olena V.</span>
-                            <span class="testimonial-card__role">Product Designer, Kharkiv</span>
-                        </footer>
-                    </blockquote>
-
-                    <blockquote class="testimonial-card reveal-item">
-                        <div class="testimonial-card__avatar" aria-hidden="true">
-                            <span>DM</span>
-                        </div>
-                        <p class="testimonial-card__quote">"The caliber of technical feedback here is unlike anything
-                            I've seen in other dev communities. These people have shipped mainnet products. They spot
-                            real problems."</p>
-                        <footer class="testimonial-card__author">
-                            <span class="testimonial-card__name">Dmytro M.</span>
-                            <span class="testimonial-card__role">Rust Developer, Dnipro</span>
-                        </footer>
-                    </blockquote>
-                </div>
-            </div>
-        </section>
-
-        <!-- ============================================================
-         RESOURCES
-    ============================================================ -->
-        <section class="section section--resources" id="resources" aria-labelledby="resources-heading">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-heading" id="resources-heading">Start here</h2>
-                    <p class="section-subtext">Curated entry points for developers, designers, and newcomers entering
-                        the Solana ecosystem.</p>
-                </div>
-
-                <div class="grid grid--3">
-                    <a href="#" class="card card--resource reveal-item" aria-label="Read: Solana for Web2 Developers">
-                        <div class="card__resource-type">
-                            <span class="badge badge--neutral">Guide</span>
-                        </div>
-                        <h3 class="card__title">Solana for Web2 Developers</h3>
-                        <p class="card__body">A practical migration guide from full-stack web development to
-                            decentralized applications on Solana. No crypto background needed.</p>
-                        <span class="card__arrow" aria-hidden="true">→</span>
-                    </a>
-
-                    <a href="#" class="card card--resource reveal-item"
-                        aria-label="Read: The Superteam Bounty Playbook">
-                        <div class="card__resource-type">
-                            <span class="badge badge--neutral">Playbook</span>
-                        </div>
-                        <h3 class="card__title">The Superteam Bounty Playbook</h3>
-                        <p class="card__body">How to find, evaluate, and complete bounties that build your on-chain
-                            reputation and earnings within the Superteam ecosystem.</p>
-                        <span class="card__arrow" aria-hidden="true">→</span>
-                    </a>
-
-                    <a href="#" class="card card--resource reveal-item"
-                        aria-label="Watch: How Grants Work at Superteam Ukraine">
-                        <div class="card__resource-type">
-                            <span class="badge badge--neutral">Video</span>
-                        </div>
-                        <h3 class="card__title">How Grants Work at Superteam Ukraine</h3>
-                        <p class="card__body">45-minute walkthrough of the grant application process, evaluation
-                            criteria, and what reviewers actually look for in funded projects.</p>
-                        <span class="card__arrow" aria-hidden="true">→</span>
-                    </a>
+                <div class="register__visual" aria-hidden="true">
+                    <!-- Decorative wheat cluster -->
+                    <svg viewBox="0 0 120 200" fill="none" class="wheat-decorative">
+                        <line x1="60" y1="190" x2="60" y2="20" stroke="var(--accent-primary)" stroke-width="1.5"
+                            opacity="0.3" />
+                        <ellipse cx="60" cy="160" rx="10" ry="17" transform="rotate(-25 60 160)"
+                            stroke="var(--accent-primary)" stroke-width="1" fill="none" opacity="0.4" />
+                        <ellipse cx="60" cy="135" rx="9" ry="15" transform="rotate(-22 60 135)"
+                            stroke="var(--accent-primary)" stroke-width="1" fill="none" opacity="0.4" />
+                        <ellipse cx="60" cy="112" rx="8" ry="13" transform="rotate(-19 60 112)"
+                            stroke="var(--accent-primary)" stroke-width="1" fill="none" opacity="0.4" />
+                        <ellipse cx="60" cy="148" rx="10" ry="17" transform="rotate(25 60 148)"
+                            stroke="var(--accent-primary)" stroke-width="1" fill="none" opacity="0.4" />
+                        <ellipse cx="60" cy="124" rx="9" ry="15" transform="rotate(22 60 124)"
+                            stroke="var(--accent-primary)" stroke-width="1" fill="none" opacity="0.4" />
+                        <ellipse cx="60" cy="102" rx="8" ry="13" transform="rotate(19 60 102)"
+                            stroke="var(--accent-primary)" stroke-width="1" fill="none" opacity="0.4" />
+                        <ellipse cx="60" cy="50" rx="5" ry="18" stroke="var(--accent-primary)" stroke-width="1"
+                            fill="none" opacity="0.5" />
+                        <line x1="60" y1="32" x2="51" y2="10" stroke="var(--accent-primary)" stroke-width="0.8"
+                            opacity="0.4" />
+                        <line x1="60" y1="32" x2="69" y2="10" stroke="var(--accent-primary)" stroke-width="0.8"
+                            opacity="0.4" />
+                    </svg>
                 </div>
             </div>
         </section>
@@ -574,17 +617,49 @@
         <!-- ============================================================
          FAQ
     ============================================================ -->
-        <section class="section section--faq section--alternate" id="faq" aria-labelledby="faq-heading">
+        <section class="section section--faq" id="faq" aria-labelledby="faq-heading">
             <div class="container container--narrow">
                 <div class="section-header">
-                    <h2 class="section-heading" id="faq-heading">Common questions</h2>
+                    <span class="section-eyebrow">FAQ</span>
+                    <h2 class="section-heading" id="faq-heading">Answers to your most common questions</h2>
                 </div>
 
-                <div class="accordion" role="list" id="faq-accordion">
+                <div class="accordion" id="faq-accordion">
 
-                    <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1-panel"
-                            id="faq-1-trigger">
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-1" id="faq-1-btn">
+                            <span>What is Superteam Ukraine?</span>
+                            <svg class="accordion-trigger__chevron" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none" aria-hidden="true">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="accordion-panel" id="faq-1" aria-labelledby="faq-1-btn" hidden>
+                            <p>Superteam Ukraine (ex Kumeka Team) is the #1 Solana Web3 hub in Ukraine. We support
+                                founders, developers, and creators building in the Solana ecosystem through education,
+                                grants, bounties, and community events.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2" id="faq-2-btn">
+                            <span>Why join Superteam Ukraine?</span>
+                            <svg class="accordion-trigger__chevron" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none" aria-hidden="true">
+                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="accordion-panel" id="faq-2" aria-labelledby="faq-2-btn" hidden>
+                            <p>You get access to grants for startup development and seed funding, cash bounties,
+                                employment in hub projects, an active builder community, hackathons including our
+                                KUMEKATHON, and an acceleration program for top projects.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3" id="faq-3-btn">
                             <span>Do I need to be Ukrainian to join?</span>
                             <svg class="accordion-trigger__chevron" width="20" height="20" viewBox="0 0 20 20"
                                 fill="none" aria-hidden="true">
@@ -592,84 +667,58 @@
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
-                        <div class="accordion-panel" id="faq-1-panel" role="region" aria-labelledby="faq-1-trigger"
-                            hidden>
-                            <p>No. Superteam Ukraine is for builders who are based in Ukraine or have strong ties to the
-                                Ukrainian tech ecosystem. Nationality is not a requirement — contribution and quality of
-                                work are.</p>
+                        <div class="accordion-panel" id="faq-3" aria-labelledby="faq-3-btn" hidden>
+                            <p>No. Superteam Ukraine is open to anyone based in Ukraine or with strong ties to the
+                                Ukrainian tech ecosystem. Nationality is not a requirement — contribution quality and
+                                commitment are what matter.</p>
                         </div>
                     </div>
 
-                    <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-2-panel"
-                            id="faq-2-trigger">
-                            <span>What skills does Superteam Ukraine accept?</span>
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4" id="faq-4-btn">
+                            <span>What is the relationship between Superteam Ukraine and Superteam Global?</span>
                             <svg class="accordion-trigger__chevron" width="20" height="20" viewBox="0 0 20 20"
                                 fill="none" aria-hidden="true">
                                 <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
-                        <div class="accordion-panel" id="faq-2-panel" role="region" aria-labelledby="faq-2-trigger"
-                            hidden>
-                            <p>Development (Rust, TypeScript, Anchor), design (product, UI/UX, brand), marketing and
-                                growth, research, content, and operations. All skills are valid if there's demonstrable
-                                output to show.</p>
+                        <div class="accordion-panel" id="faq-4" aria-labelledby="faq-4-btn" hidden>
+                            <p>Superteam Ukraine is a chapter of Superteam Global — a partner of the Solana Foundation.
+                                We operate independently but share the global Superteam infrastructure for grants,
+                                bounties, and the Earn platform.</p>
                         </div>
                     </div>
 
-                    <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-3-panel"
-                            id="faq-3-trigger">
-                            <span>How are grants distributed?</span>
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-5" id="faq-5-btn">
+                            <span>How can I get support for my project?</span>
                             <svg class="accordion-trigger__chevron" width="20" height="20" viewBox="0 0 20 20"
                                 fill="none" aria-hidden="true">
                                 <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
-                        <div class="accordion-panel" id="faq-3-panel" role="region" aria-labelledby="faq-3-trigger"
-                            hidden>
-                            <p>Grants are reviewed by a rotating council of senior Superteam Ukraine members.
-                                Applications are scored on technical clarity, real-world impact, team credibility, and
-                                viability on Solana. Decisions are made within 3 weeks of submission.</p>
+                        <div class="accordion-panel" id="faq-5" aria-labelledby="faq-5-btn" hidden>
+                            <p>Register your project using our project form. Our team reviews submissions weekly and can
+                                connect you with grants, mentors, developers, and the broader Superteam network based on
+                                your stage and needs.</p>
                         </div>
                     </div>
 
-                    <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-4-panel"
-                            id="faq-4-trigger">
-                            <span>Is Superteam Ukraine affiliated with the Solana Foundation?</span>
+                    <div class="accordion-item">
+                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-6" id="faq-6-btn">
+                            <span>Can I join without being a full "Member"?</span>
                             <svg class="accordion-trigger__chevron" width="20" height="20" viewBox="0 0 20 20"
                                 fill="none" aria-hidden="true">
                                 <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
-                        <div class="accordion-panel" id="faq-4-panel" role="region" aria-labelledby="faq-4-trigger"
-                            hidden>
-                            <p>Superteam Ukraine is a chapter of Superteam — an official partner of the Solana
-                                Foundation. We operate independently but within the broader Superteam framework and
-                                maintain direct relationships with the Foundation for grant funding and ecosystem
-                                support.</p>
-                        </div>
-                    </div>
-
-                    <div class="accordion-item" role="listitem">
-                        <button class="accordion-trigger" aria-expanded="false" aria-controls="faq-5-panel"
-                            id="faq-5-trigger">
-                            <span>How often are bounties posted?</span>
-                            <svg class="accordion-trigger__chevron" width="20" height="20" viewBox="0 0 20 20"
-                                fill="none" aria-hidden="true">
-                                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <div class="accordion-panel" id="faq-5-panel" role="region" aria-labelledby="faq-5-trigger"
-                            hidden>
-                            <p>New bounties are posted every Tuesday and Friday. Emergency bounties with tighter
-                                timelines can appear on any day. Notifications go to our Telegram channel first, then
-                                the official Superteam Earn platform.</p>
+                        <div class="accordion-panel" id="faq-6" aria-labelledby="faq-6-btn" hidden>
+                            <p>Yes. You can participate in events, complete bounties on Superteam Earn, and follow our
+                                content without full membership. Full membership unlocks grants, direct mentorship, and
+                                community access.</p>
                         </div>
                     </div>
 
@@ -678,61 +727,77 @@
         </section>
 
         <!-- ============================================================
-         FINAL CTA
+         NEWSLETTER + FINAL CTA
     ============================================================ -->
         <section class="section section--final-cta" id="join" aria-labelledby="cta-heading">
-            <!-- Wheat motif bottom right -->
             <div class="wheat-motif wheat-motif--cta" aria-hidden="true" style="display:none">
-                <svg viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line x1="100" y1="380" x2="100" y2="40" stroke="currentColor" stroke-width="1.5" />
-                    <ellipse cx="100" cy="340" rx="14" ry="22" transform="rotate(-30 100 340)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="295" rx="13" ry="21" transform="rotate(-28 100 295)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="252" rx="12" ry="20" transform="rotate(-25 100 252)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="212" rx="11" ry="18" transform="rotate(-22 100 212)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="175" rx="10" ry="16" transform="rotate(-20 100 175)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="320" rx="14" ry="22" transform="rotate(30 100 320)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="277" rx="13" ry="21" transform="rotate(28 100 277)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="235" rx="12" ry="20" transform="rotate(25 100 235)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="196" rx="11" ry="18" transform="rotate(22 100 196)" stroke="currentColor"
-                        stroke-width="1.2" fill="none" />
-                    <ellipse cx="100" cy="80" rx="7" ry="24" stroke="currentColor" stroke-width="1.2" fill="none" />
-                    <line x1="100" y1="56" x2="88" y2="30" stroke="currentColor" stroke-width="1" />
-                    <line x1="100" y1="56" x2="112" y2="30" stroke="currentColor" stroke-width="1" />
+                <svg viewBox="0 0 160 380" fill="none">
+                    <line x1="80" y1="370" x2="80" y2="30" stroke="currentColor" stroke-width="1.5" />
+                    <ellipse cx="80" cy="330" rx="13" ry="21" transform="rotate(-28 80 330)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <ellipse cx="80" cy="290" rx="12" ry="19" transform="rotate(-26 80 290)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <ellipse cx="80" cy="252" rx="11" ry="18" transform="rotate(-24 80 252)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <ellipse cx="80" cy="310" rx="13" ry="21" transform="rotate(28 80 310)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <ellipse cx="80" cy="271" rx="12" ry="19" transform="rotate(26 80 271)" stroke="currentColor"
+                        stroke-width="1.1" fill="none" />
+                    <ellipse cx="80" cy="50" rx="5" ry="20" stroke="currentColor" stroke-width="1.1" fill="none" />
+                    <line x1="80" y1="30" x2="69" y2="8" stroke="currentColor" stroke-width="0.9" />
+                    <line x1="80" y1="30" x2="91" y2="8" stroke="currentColor" stroke-width="0.9" />
                 </svg>
             </div>
 
             <div class="container container--narrow final-cta__inner">
                 <h2 class="final-cta__heading" id="cta-heading">
-                    Ready to build something<br />worth building?
+                    Let's build the next generation<br />of the internet together on Solana.
                 </h2>
-                <p class="final-cta__subtext">Applications are reviewed weekly. The bar is high. The community is worth
-                    it.</p>
-                <div class="final-cta__actions">
-                    <a href="#" class="btn btn--primary btn--lg">Apply to Join</a>
-                    <div class="final-cta__secondary-links">
-                        <a href="https://twitter.com/SuperteamUA" class="link-icon" target="_blank"
-                            rel="noopener noreferrer" aria-label="Follow on X (Twitter)">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <p class="final-cta__subtext">Subscribe to our newsletter to get notified about upcoming events,
+                    bounties, grants, and community perks.</p>
+
+                <!-- Newsletter form -->
+                <form class="newsletter-form" action="#" method="POST" aria-label="Newsletter signup">
+                    <div class="newsletter-form__row">
+                        <input type="email" name="email" id="newsletter-email" class="newsletter-form__input"
+                            placeholder="your@email.com" required aria-label="Email address" autocomplete="email" />
+                        <button type="submit" class="btn btn--primary">Subscribe</button>
+                    </div>
+                    <p class="newsletter-form__note">No spam. Unsubscribe anytime.</p>
+                </form>
+
+                <div class="final-cta__divider" aria-hidden="true"></div>
+
+                <div class="final-cta__join">
+                    <p class="final-cta__join-text">Ready to join the community?</p>
+                    <div class="final-cta__actions">
+                        <a href="#" class="btn btn--primary btn--lg">Apply to Join</a>
+                        <a href="#" class="btn btn--secondary btn--lg">Register a Project</a>
+                    </div>
+                    <div class="final-cta__social">
+                        <a href="https://twitter.com/SuperteamUKR" class="link-icon" target="_blank"
+                            rel="noopener noreferrer" aria-label="Follow on X">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path
                                     d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                             </svg>
-                            Follow on X
+                            X / Twitter
                         </a>
                         <a href="https://t.me/superteam_ukraine" class="link-icon" target="_blank"
                             rel="noopener noreferrer" aria-label="Join Telegram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                                 <path
                                     d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
                             </svg>
-                            Join Telegram
+                            Telegram
+                        </a>
+                        <a href="https://discord.gg/superteam-ukraine" class="link-icon" target="_blank"
+                            rel="noopener noreferrer" aria-label="Join Discord">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.079.11 18.1.128 18.113a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
+                            </svg>
+                            Discord
                         </a>
                     </div>
                 </div>
@@ -748,41 +813,52 @@
         <div class="container footer__inner">
             <div class="footer__brand">
                 <a href="/" class="navbar__logo" aria-label="Superteam Ukraine Home">
-                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                        <rect width="32" height="32" rx="8" fill="var(--accent-primary)" />
-                        <path d="M8 22 L16 8 L24 22" stroke="var(--bg-base)" stroke-width="2.5" stroke-linecap="round"
-                            stroke-linejoin="round" fill="none" />
-                        <path d="M10.5 18 L21.5 18" stroke="var(--bg-base)" stroke-width="2.5" stroke-linecap="round" />
+                    <svg class="navbar__logo-icon" width="32" height="32" viewBox="0 0 36 36" fill="none"
+                        aria-hidden="true">
+                        <rect width="36" height="36" rx="9" fill="#E8C547" />
+                        <text x="6" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="20" font-weight="800"
+                            fill="#0d0f14">ST</text>
                     </svg>
-                    <span class="navbar__wordmark">Superteam <em>Ukraine</em></span>
+                    <div class="navbar__wordmark">
+                        <span class="navbar__wordmark-main">Superteam <em>Ukraine</em></span>
+                        <span class="navbar__wordmark-sub">ex Kumeka Team</span>
+                    </div>
                 </a>
-                <p class="footer__tagline">Ukraine's home for serious Solana builders.</p>
+                <p class="footer__tagline">Ukraine's #1 Solana Web3 hub.<br />Built on Solana.</p>
+                <div class="footer__solana-badge">
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                        <circle cx="10" cy="10" r="9" stroke="var(--accent-secondary)" stroke-width="1.5" />
+                        <path d="M6 10l4 4 4-4M6 6l4 4 4-4" stroke="var(--accent-secondary)" stroke-width="1.3"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Built on Solana</span>
+                </div>
             </div>
 
             <nav class="footer__nav" aria-label="Footer navigation">
                 <div class="footer__nav-group">
                     <span class="footer__nav-label">Community</span>
                     <a href="#about" class="footer__link">About</a>
-                    <a href="#projects" class="footer__link">Projects</a>
+                    <a href="#pillars" class="footer__link">What We Do</a>
+                    <a href="#community" class="footer__link">Members</a>
                     <a href="#events" class="footer__link">Events</a>
-                    <a href="#join" class="footer__link">Apply</a>
                 </div>
                 <div class="footer__nav-group">
                     <span class="footer__nav-label">Resources</span>
-                    <a href="#resources" class="footer__link">Start Here</a>
+                    <a href="#" class="footer__link">Superteam Earn</a>
+                    <a href="#" class="footer__link">Apply for Grant</a>
                     <a href="#faq" class="footer__link">FAQ</a>
-                    <a href="#" class="footer__link">Blog</a>
-                    <a href="#" class="footer__link">Bounties</a>
+                    <a href="https://superteam.fun" class="footer__link" target="_blank"
+                        rel="noopener noreferrer">Superteam Global</a>
                 </div>
                 <div class="footer__nav-group">
                     <span class="footer__nav-label">Connect</span>
-                    <a href="https://twitter.com/SuperteamUA" class="footer__link" target="_blank"
+                    <a href="https://twitter.com/SuperteamUKR" class="footer__link" target="_blank"
                         rel="noopener noreferrer">X (Twitter)</a>
                     <a href="https://t.me/superteam_ukraine" class="footer__link" target="_blank"
                         rel="noopener noreferrer">Telegram</a>
-                    <a href="https://github.com/superteam-ukraine" class="footer__link" target="_blank"
-                        rel="noopener noreferrer">GitHub</a>
-                    <a href="#" class="footer__link">LinkedIn</a>
+                    <a href="#" class="footer__link" target="_blank" rel="noopener noreferrer">Discord</a>
+                    <a href="#" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
             </nav>
         </div>
