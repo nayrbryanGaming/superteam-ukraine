@@ -1,16 +1,5 @@
 {
-  "version": 2,
-  "name": "superteam-ukraine",
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+    "version": 2,
+    "outputDirectory": ".",
+    "public": true
 }

@@ -752,8 +752,9 @@ code,
     flex-shrink: 0;
 }
 
-/* Wheat watermark */
+/* Wheat watermark — inline display:none is overridden here when CSS loads */
 .wheat-motif {
+    display: block !important;
     position: absolute;
     color: var(--text-muted);
     opacity: 0.08;
